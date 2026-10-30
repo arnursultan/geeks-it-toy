@@ -1,4 +1,4 @@
-import geeksLogo from '../GeeksLogo.svg';
+const geeksLogo = '/geeks-logo.svg';
 
 export type Technology = { name: string; icon: string; color?: string };
 
