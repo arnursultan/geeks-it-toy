@@ -15,7 +15,8 @@ const fullstackCore = [
   brand('HTML5', 'html5', 'E34F26'),
   brand('CSS3', 'css3', '1572B6'),
   brand('JavaScript', 'javascript', 'F7DF1E'),
-  brand('React.js', 'react', '61DAFB'),
+  brand('TypeScript', 'typescript', '3178C6'),
+  brand('React', 'react', '61DAFB'),
   brand('Node.js', 'nodedotjs', '339933'),
   brand('Express.js', 'express', 'FFFFFF'),
   brand('PostgreSQL', 'postgresql', '4169E1'),
@@ -30,6 +31,7 @@ const fullstackTools = [
   concept('JWT', 'jwt'),
   brand('Postman', 'postman', 'FF6C37'),
   brand('Figma', 'figma', 'F24E1E'),
+  brand('Next.js', 'nextdotjs', 'FFFFFF'),
 ];
 const backendCore = [
   brand('Python', 'python', '3776AB'),
@@ -37,30 +39,50 @@ const backendCore = [
   concept('Django REST Framework (DRF)', 'api'),
   brand('PostgreSQL', 'postgresql', '4169E1'),
   concept('SQL', 'database'),
+];
+const backendTools = [
+  brand('FastAPI', 'fastapi', '009688'),
   brand('Redis', 'redis', 'FF4438'),
   brand('Celery', 'celery', '37814A'),
   brand('Docker', 'docker', '2496ED'),
   brand('Linux', 'linux', 'FCC624'),
+  brand('Git', 'git', 'F05032'),
+  brand('GitHub', 'github', 'FFFFFF'),
+  brand('Pytest', 'pytest', '0A9EDC'),
+  brand('Ruff', 'ruff', 'D7FF64'),
+  concept('REST API', 'api'),
+  concept('JWT', 'jwt'),
 ];
 const flutterCore = [
   brand('Dart', 'dart', '0175C2'),
   brand('Flutter', 'flutter', '54C5F8'),
-  concept('BLoC / Cubit', 'state'),
+  concept('BLoC', 'state'),
+  concept('Cubit', 'state'),
   concept('Riverpod', 'state'),
+];
+const flutterTools = [
   brand('Firebase', 'firebase', 'DD2C00'),
-  concept('REST API (Dio)', 'api'),
+  concept('REST API', 'api'),
+  concept('Dio', 'api'),
   concept('Clean Architecture', 'architecture'),
   concept('MVVM', 'architecture'),
+  brand('Git', 'git', 'F05032'),
+  brand('GitHub', 'github', 'FFFFFF'),
 ];
 const designCore = [
   brand('Figma', 'figma', 'F24E1E'),
   brand('FigJam', 'figma', 'F24E1E'),
   concept('UX Research', 'research'),
   concept('UI Design', 'design'),
-  concept('Design Systems / UI Kit', 'layers'),
+];
+const designTools = [
+  concept('Design Systems', 'layers'),
+  concept('UI Kit', 'layers'),
   concept('Prototyping', 'prototype'),
+  concept('Wireframing', 'wireframe'),
+  concept('User Flow', 'flow'),
   brand('Material Design', 'materialdesign', '757575'),
-  concept('iOS Guidelines', 'guidelines'),
+  concept('iOS Human Interface Guidelines', 'guidelines'),
   brand('Behance', 'behance', '1769FF'),
 ];
 
@@ -83,9 +105,13 @@ export const event = {
   mapProvider: '2ГИС',
   officialGeeksLogo: geeksLogo,
   contacts: {
-    phone: '+996 225 082 021',
-    phoneLink: 'tel:+996225082021',
-    whatsapp: 'https://wa.me/996225082021',
+    whatsappPhone: '+996 990 082 021',
+    whatsapp: 'https://wa.me/996990082021',
+    calls: [
+      { phone: '+996 507 052 018', link: 'tel:+996507052018' },
+      { phone: '+996 557 052 018', link: 'tel:+996557052018' },
+      { phone: '+996 777 052 018', link: 'tel:+996777052018' },
+    ],
     instagramHandle: '@geeksosh',
     instagram: 'https://www.instagram.com/geeksosh/',
   },
@@ -114,12 +140,15 @@ export const event = {
     },
     {
       id: '02',
-      name: 'Backend',
+      name: 'Backend Python',
       code: 'SERVER / API',
       color: 'green',
       description: 'Серверная разработка, API, базы данных, бизнес-логика и инфраструктура приложений.',
       featured: backendCore.slice(0, 4),
-      stacks: [{ label: 'Основной стек', items: backendCore }],
+      stacks: [
+        { label: 'Основной стек', items: backendCore },
+        { label: 'Дополнительные технологии и инструменты', items: backendTools },
+      ],
     },
     {
       id: '03',
@@ -128,7 +157,10 @@ export const event = {
       color: 'blue',
       description: 'Создание кроссплатформенных мобильных приложений для Android и iOS.',
       featured: flutterCore.slice(0, 4),
-      stacks: [{ label: 'Основной стек', items: flutterCore }],
+      stacks: [
+        { label: 'Основной стек', items: flutterCore },
+        { label: 'Дополнительные технологии и инструменты', items: flutterTools },
+      ],
     },
     {
       id: '04',
@@ -137,7 +169,10 @@ export const event = {
       color: 'pink',
       description: 'Исследование пользовательского опыта, проектирование интерфейсов и создание дизайн-систем.',
       featured: designCore.slice(0, 4),
-      stacks: [{ label: 'Инструменты и практики', items: designCore }],
+      stacks: [
+        { label: 'Основной стек', items: designCore },
+        { label: 'Инструменты и практики', items: designTools },
+      ],
     },
   ],
   discounts: [

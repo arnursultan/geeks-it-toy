@@ -280,8 +280,8 @@ img,svg,iframe{max-width:100%}
 @media(prefers-reduced-motion:reduce){.stack-panel{animation:none}}
 
 /* Expand the stack below the fixed grid; opening never changes card geometry. */
-.stack-panel-region{display:block;max-height:0;opacity:0;margin:0;overflow:hidden;pointer-events:none;transition:max-height .44s cubic-bezier(.2,.7,.2,1),opacity .2s ease,margin .32s ease}
-.stack-panel-region.is-open{max-height:1200px;opacity:1;margin-top:18px;pointer-events:auto}
+.stack-panel-region{display:block;grid-column:1/-1;order:99;min-width:0;min-height:0;max-height:0;opacity:0;margin:0;overflow:hidden;pointer-events:none;transition:max-height .44s cubic-bezier(.2,.7,.2,1),opacity .2s ease,margin .32s ease}
+.stack-panel-region.is-open{max-height:1200px;opacity:1;margin-top:9px;pointer-events:auto}
 .stack-panel{min-height:0;margin-top:0;overflow:hidden;animation:none}
 .stack-panel-content{min-height:0;overflow:hidden;opacity:1;transform:translateY(0);transition:opacity .18s ease,transform .18s ease}
 .stack-panel-region:not(.is-open) .stack-panel-content{opacity:0;transform:translateY(-8px)}
@@ -295,7 +295,120 @@ img,svg,iframe{max-width:100%}
 .track-toggle:hover .track-expand-hint{letter-spacing:.06em;transform:translateX(3px)}
 .track-toggle:active{transform:scale(.99)}
 .envelope-seal i{font:normal 18px/1 var(--mono);color:#11120f}
+.envelope-shell:after{content:'';position:absolute;z-index:7;inset:10px;border:1px solid #eaff5236;pointer-events:none;opacity:.48;transition:inset .7s cubic-bezier(.2,.7,.16,1),opacity .45s .16s;background:linear-gradient(135deg,#eaff524c 0 1px,transparent 1px 12px) left top/14px 14px no-repeat,linear-gradient(225deg,#eaff524c 0 1px,transparent 1px 12px) right top/14px 14px no-repeat,linear-gradient(45deg,#eaff524c 0 1px,transparent 1px 12px) left bottom/14px 14px no-repeat,linear-gradient(315deg,#eaff524c 0 1px,transparent 1px 12px) right bottom/14px 14px no-repeat}
+.envelope-shell:focus-visible{outline:2px solid var(--green);outline-offset:8px}
+.envelope-back{box-shadow:inset 0 0 0 7px #0b0d0928,inset 0 0 0 8px #dfff521b}
+.envelope-is-opening .envelope-shell:after{inset:6px;opacity:.92}
+.envelope-pattern{transition:opacity .45s .18s,filter .45s .18s;filter:drop-shadow(0 0 5px #eaff5230)}
+.envelope-invitation-line{margin-top:3px;color:var(--green);font:600 12px var(--display);letter-spacing:.015em}
+.envelope-controls .sound-switch{min-height:36px}
+.ornament-divider{width:min(300px,100%);display:flex;align-items:center;gap:12px;color:#b5c640;opacity:.72;margin:16px 0 21px}
+.ornament-divider>span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#dfff526e)}
+.ornament-divider>span:last-child{transform:scaleX(-1)}
+.ornament-divider .ornament{width:clamp(48px,7vw,68px);flex:0 0 auto}
+.venue-info>.ornament-divider{width:min(250px,78%);margin:17px 0 14px}
+.farewell-section{position:relative;overflow:hidden;padding:clamp(58px,9vw,112px) clamp(18px,7vw,100px);background:radial-gradient(ellipse at 50% 50%,#dfff520b,transparent 65%),#11120f}
+.farewell-card{position:relative;isolation:isolate;max-width:1020px;margin:auto;padding:clamp(26px,6vw,72px);border:1px solid #dfff5238;background:linear-gradient(145deg,#191c16e8,#121410f5);text-align:center;box-shadow:0 25px 85px #0004}
+.farewell-card:before{content:'';position:absolute;z-index:-1;inset:8px;border:1px solid #dfff521a;pointer-events:none;background:linear-gradient(135deg,#dfff5233 0 1px,transparent 1px 15px) left top/18px 18px no-repeat,linear-gradient(225deg,#dfff5233 0 1px,transparent 1px 15px) right top/18px 18px no-repeat,linear-gradient(45deg,#dfff5233 0 1px,transparent 1px 15px) left bottom/18px 18px no-repeat,linear-gradient(315deg,#dfff5233 0 1px,transparent 1px 15px) right bottom/18px 18px no-repeat}
+.farewell-card>.ornament-divider{margin:0 auto 28px}
+.farewell-card>.ornament-divider:last-child{margin:28px auto 0;transform:rotate(180deg)}
+.farewell-card>.overline{margin:0 0 18px;color:var(--green);font-size:clamp(9px,1vw,11px)}
+.farewell-card h2{margin:0;color:var(--yellow);font:600 clamp(34px,8vw,94px)/1.08 var(--display);letter-spacing:-.075em;text-wrap:balance;overflow-wrap:anywhere;text-shadow:0 0 38px #eaff521e}
+.farewell-date{display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,22px);margin:22px 0 0;color:#e6eadc}
+.farewell-date>span{width:clamp(18px,6vw,72px);height:1px;background:#c6d55266}
+.farewell-date strong{font:500 clamp(14px,2vw,19px) var(--mono);letter-spacing:.035em}
+.farewell-route{min-height:50px;display:inline-flex;align-items:center;justify-content:space-between;gap:38px;margin-top:28px;padding:0 18px;background:var(--yellow);color:#15170f;font:700 12px var(--mono);transition:transform .2s,box-shadow .2s}
+.farewell-route:hover{transform:translateY(-2px);box-shadow:0 0 28px #eaff5230}
+.farewell-route:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.farewell-route b{font-size:16px}
+.farewell-card.reveal{transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
 @keyframes stackContentIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 @keyframes stackTechnologyIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:680px){.stack-panel-region.is-open{margin-top:13px}.stack-panel-heading{align-items:flex-start}.stack-panel-heading>div{min-width:0}.stack-panel-heading h3{overflow-wrap:anywhere}.track-toggle:active{transform:scale(.995)}}
+@media(max-width:680px){
+ .envelope-scene{width:100%;padding-inline:18px}
+ .envelope-shell{width:min(430px,88vw)}
+ .envelope-caption{max-width:calc(100vw - 36px)}
+ .envelope-invitation-line{font-size:clamp(11px,3.4vw,13px);overflow-wrap:anywhere}
+ .ornament-divider{gap:8px;margin-top:13px;margin-bottom:17px}
+ .venue-info>.ornament-divider{width:min(220px,72%)}
+ .farewell-section{padding:58px 18px}
+ .farewell-card{padding:clamp(22px,7vw,34px) clamp(16px,5vw,26px)}
+ .farewell-card h2{font-size:clamp(34px,10.5vw,58px)}
+ .farewell-date{gap:9px}
+ .farewell-date strong{font-size:clamp(13px,3.8vw,16px)}
+ .farewell-route{width:min(100%,330px);min-height:52px;gap:12px;padding-inline:14px;font-size:clamp(10px,3vw,12px)}
+}
+@media(max-width:350px){
+ .envelope-overline{font-size:6px;letter-spacing:.08em}
+ .envelope-shell{width:min(430px,86vw)}
+ .envelope-controls{gap:10px;align-items:flex-start}
+ .envelope-controls>span{text-align:right;line-height:1.6}
+ .farewell-section{padding-inline:14px}
+ .farewell-card{padding-inline:14px}
+ .farewell-date strong{font-size:12px}
+ .farewell-route{padding-inline:10px}
+}
 @media(prefers-reduced-motion:reduce){.stack-panel-region,.stack-panel-content,.stack-panel-heading,.stack-panel-groups,.stack-panel .stack-tools .technology-badge,.track-card,.track-expand-hint,.track-toggle{transition:none!important;animation:none!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){
+ .envelope-shell:after,.envelope-pattern,.envelope-invitation-line,.farewell-card,.farewell-route,.ornament-divider{transition:none!important;animation:none!important}
+ .farewell-route:hover{transform:none}
+}
+
+/* On phones, slot the expanded stack directly after its selected card. */
+@media(max-width:680px){
+ .track-grid{grid-template-columns:minmax(0,1fr);align-items:start}
+ .track-grid>.track-card:nth-of-type(1){order:2}
+ .track-grid>.track-card:nth-of-type(2){order:4}
+ .track-grid>.track-card:nth-of-type(3){order:6}
+ .track-grid>.track-card:nth-of-type(4){order:8}
+ .track-grid>.stack-panel-region{grid-column:1;order:9;margin-top:0}
+ .track-grid>.stack-panel-region.is-open{margin-top:0}
+ .track-grid>.stack-panel-region.stack-after-01{order:1}
+ .track-grid>.stack-panel-region.stack-after-02{order:3}
+ .track-grid>.stack-panel-region.stack-after-03{order:5}
+ .track-grid>.stack-panel-region.stack-after-04{order:7}
+ .stack-panel-region{width:100%}
+ #venue .venue-grid,#venue .venue-info,#venue .venue-data,#venue .venue-data>div{min-width:0;max-width:100%}
+ #venue .venue-info h2{font-size:clamp(34px,10vw,46px);line-height:1.04;letter-spacing:-.065em;overflow-wrap:anywhere;word-break:normal}
+ #venue .venue-intro{font-size:14px;line-height:1.7;max-width:100%;overflow-wrap:anywhere}
+ #venue .venue-data{gap:10px}
+ #venue .venue-data b,#venue .venue-data p{overflow-wrap:anywhere;word-break:normal}
+}
+
+/* Consistent track card rhythm: all four cards share the same content slots. */
+.track-grid{align-items:stretch}
+.track-card{height:auto;min-width:0;display:flex;flex-direction:column}
+.track-toggle{flex:1;min-height:0;height:auto}
+.track-toggle>strong{min-height:2.5em;display:flex;align-items:flex-start}
+.track-toggle>p{min-height:6.5em;overflow-wrap:anywhere}
+.track-preview{min-height:60px;align-content:flex-start}
+.track-expand-hint{margin-top:auto;padding-top:14px;min-height:34px}
+.track-toggle:focus-visible,.contact-links>a:focus-visible,.footer a:focus-visible,.footer button:focus-visible,.venue-buttons a:focus-visible,.main-nav a:focus-visible,.main-nav button:focus-visible,.primary-button:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.contact-links>a{min-height:80px}
+.contact-links strong{overflow-wrap:anywhere}
+@media(max-width:950px){
+ .track-card{min-height:360px}
+ .track-toggle{height:auto;min-height:360px}
+}
+@media(max-width:680px){
+ .track-card{min-height:350px}
+ .track-toggle{min-height:350px;padding:clamp(17px,5vw,23px)}
+ .track-toggle>strong{min-height:2.5em}
+ .track-toggle>p{min-height:6em}
+ .track-preview{min-height:60px}
+ .track-expand-hint{padding-top:12px;min-height:32px}
+ .contact-links>a{min-height:76px}
+ #venue .venue-info h2{max-width:100%;font-size:clamp(32px,9.8vw,44px);overflow-wrap:anywhere;hyphens:auto}
+ #venue .venue-info,#venue .venue-grid{overflow-wrap:anywhere}
+}
+@media(max-width:350px){
+ .track-toggle>p{min-height:6.5em}
+ .contact-links>a{grid-template-columns:36px minmax(0,1fr) 16px;gap:9px}
+ .contact-links strong{font-size:14px}
+ #venue .venue-info h2{font-size:32px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .contact-links>a,.track-card,.track-toggle,.primary-button{transition:none!important}
+}

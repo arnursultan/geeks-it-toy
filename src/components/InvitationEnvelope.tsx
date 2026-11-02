@@ -53,7 +53,7 @@ export default function InvitationEnvelope({ onComplete, onDismiss }: Props) {
         <span className="envelope-seal" aria-hidden="true"><i>✳</i></span>
         <span className="envelope-pattern pattern-left"/><span className="envelope-pattern pattern-right"/>
       </button>
-      <div className="envelope-caption"><div><strong>IT ТОЙ · ОШ</strong><span>Сизге чакыруу бар</span><small>{opening ? 'КОНВЕРТ АЧЫЛУУДА...' : 'Нажмите, чтобы открыть'}</small></div></div>
+      <div className="envelope-caption"><div><strong>IT ТОЙ · ОШ</strong><span>Сизге чакыруу бар</span><b className="envelope-invitation-line">Кел, IT дүйнөсүнө!</b><small>{opening ? 'КОНВЕРТ АЧЫЛУУДА...' : 'Нажмите, чтобы открыть'}</small></div></div>
       <div className="envelope-controls"><button type="button" className={soundEnabled ? 'sound-switch sound-on' : 'sound-switch'} onClick={() => setSoundEnabled(!soundEnabled)} aria-pressed={soundEnabled}>{soundEnabled ? '♫ ЗВУК ВКЛ.' : '♫ ЗВУК ВЫКЛ.'}</button><span>{event.dateLabel.toUpperCase()} · {event.city.toUpperCase()}</span></div>
     </div>
   </div>;
