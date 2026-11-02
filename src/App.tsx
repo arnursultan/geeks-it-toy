@@ -132,7 +132,7 @@ function App() {
               <p className="hero-kyrgyz">Келечекке бирге кадам таштайлы.</p>
               <p className="hero-copy">Открой для себя мир информационных технологий вместе с Geeks.</p>
               <button className="primary-button" onClick={() => jump('about')}>ОТКРЫТЬ ПРИГЛАШЕНИЕ <span>↘</span></button>
-              <div className="hero-facts"><span>{event.dateLabel}</span><i/><span>{event.startTime}</span><i/><span>{event.city}, {event.country}</span></div>
+              <div className="hero-facts" aria-label="Дата, время и место IT Тоя"><span><small>ДАТА</small><strong>{event.dateLabel}</strong></span><i/><span><small>НАЧАЛО</small><strong>{event.startTime}</strong></span><i/><span><small>МЕСТО</small><strong>{event.city}, {event.country}</strong></span></div>
             </div>
             <div className="hero-side"><TerminalGreeting replayKey={terminalReplayKey} start={siteVisible}/><div className="hero-side-brand"><span>ОРГАНИЗОВАНО<br/>IT-АКАДЕМИЕЙ GEEKS</span><Ornament/></div></div>
           </div>
