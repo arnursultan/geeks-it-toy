@@ -96,16 +96,8 @@ function App() {
     if (stackCloseTimer.current !== null) window.clearTimeout(stackCloseTimer.current);
     stackCloseTimer.current = null;
     if (expandedTrack === trackId && !closingStack) { closeStack(); return; }
-    const mobile = window.matchMedia('(max-width: 680px)').matches;
-    if (mobile && expandedTrack !== null && expandedTrack !== trackId) {
-      setClosingStack(true);
-      stackCloseTimer.current = window.setTimeout(() => {
-        setExpandedTrack(trackId);
-        setClosingStack(false);
-        stackCloseTimer.current = null;
-      }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 460);
-      return;
-    }
+    // Replace the panel content in place. Waiting for a close animation first
+    // created a blank interval on phones and made the panel feel detached.
     setClosingStack(false);
     setExpandedTrack(trackId);
   };

@@ -969,3 +969,170 @@ body{background:#10120f}
  html{scroll-behavior:auto}
  .contact-links>a,.track-card,.track-toggle,.primary-button{transition:none!important}
 }
+
+/* Final mobile fit pass: stable gutters, readable facts, and touch-safe controls. */
+@media(max-width:680px){
+ .hero{padding-inline:var(--mobile-gutter,clamp(17px,5.2vw,24px));}
+ .hero-topline{min-width:0;align-items:flex-start;line-height:1.55;letter-spacing:.045em}
+ .hero-topline>span{min-width:0;overflow-wrap:anywhere}
+ .hero-layout{width:100%;min-width:0}
+ .hero h1{font-size:clamp(90px,27vw,138px);line-height:.86;letter-spacing:-.095em}
+ .hero h1 strong{max-width:100%;}
+ .hero-slogan{font-size:clamp(21px,6.2vw,30px);line-height:1.15;text-wrap:balance}
+ .hero-kyrgyz{font-size:clamp(15px,4.2vw,19px);line-height:1.5;text-wrap:pretty;overflow-wrap:anywhere}
+ .hero-copy{font-size:clamp(14px,3.8vw,16px);line-height:1.65;max-width:38ch;color:#c8cec2;overflow-wrap:anywhere}
+ .hero-main>.primary-button{min-height:50px;max-width:100%;width:min(100%,310px);font-size:clamp(9px,2.6vw,11px)}
+ .hero-facts{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(54px,.55fr) minmax(0,1fr);gap:8px;margin-top:22px;padding-top:15px;font-size:11px;line-height:1.4}
+ .hero-facts>span{min-width:0;align-content:start;gap:5px}
+ .hero-facts small{font-size:8px;line-height:1.4}
+ .hero-facts strong{font-size:clamp(11px,3.2vw,14px);line-height:1.45;overflow-wrap:anywhere;text-wrap:pretty}
+ .hero-facts i{display:none}
+ .hero-side{min-width:0}
+ .terminal-russian{font-size:clamp(10px,2.75vw,12px);line-height:1.8;overflow-wrap:anywhere}
+ .terminal-status{gap:8px;font-size:clamp(8px,2.15vw,10px)}
+ .terminal-status button{min-height:40px;padding:8px 2px;font-size:clamp(8px,2vw,9px)}
+ .hero-side-brand{font-size:9px}
+ .hero-bottom{left:var(--mobile-gutter,clamp(17px,5.2vw,24px));right:var(--mobile-gutter,clamp(17px,5.2vw,24px));font-size:8px;line-height:1.5}
+ .section-pad{padding-inline:var(--mobile-gutter,clamp(17px,5.2vw,24px))}
+ .section-top{min-width:0;flex-wrap:wrap;font-size:9px;line-height:1.5}
+ .section-id,.section-code{font-size:clamp(9px,2.4vw,10px);overflow-wrap:anywhere}
+ .about-title h2{font-size:clamp(48px,13.5vw,64px);line-height:1;overflow-wrap:anywhere}
+ .about-text,.geeks-letter-body{font-size:clamp(15px,4vw,17px);line-height:1.75;overflow-wrap:anywhere}
+ .about-text .about-intro{font-size:clamp(20px,5.8vw,26px);line-height:1.35}
+ .learn-list span{font-size:clamp(12px,3.3vw,14px);line-height:1.55;overflow-wrap:anywhere}
+ .about-foot{font-size:clamp(8px,2vw,9px);line-height:1.5;flex-wrap:wrap}
+ .geeks-letter{min-width:0}
+ .geeks-letter-copy h2{font-size:clamp(42px,11.5vw,58px);overflow-wrap:anywhere}
+ .countdown-heading h2{font-size:clamp(46px,13vw,60px)}
+ .countdown-heading>p{font-size:14px;line-height:1.6}
+ .countdown-unit{min-height:clamp(94px,27vw,128px)}
+ .countdown-unit strong{font-size:clamp(44px,13vw,64px)}
+ .countdown-unit span,.countdown-foot{font-size:clamp(9px,2.4vw,11px);line-height:1.5}
+ .tracks-heading h2,.discounts-heading h2{font-size:clamp(36px,10.1vw,49px);line-height:1.04;overflow-wrap:anywhere}
+ .tracks-heading>p,.discounts-heading>p,.ticket-copy>p:last-child,.contacts-copy>p:last-child{font-size:clamp(14px,3.8vw,16px);line-height:1.65;max-width:42ch}
+ .track-card,.track-toggle{min-width:0;max-width:100%}
+ .track-toggle{min-height:0;padding:20px clamp(13px,4vw,20px);}
+ .track-toggle>strong{font-size:clamp(21px,5.8vw,25px);line-height:1.2;min-height:0}
+ .track-toggle>p{font-size:clamp(14px,3.8vw,16px);line-height:1.6;min-height:0;overflow-wrap:anywhere}
+ .track-preview-label,.track-expand-hint{font-size:clamp(10px,2.7vw,12px);line-height:1.5}
+ .track-preview{min-height:0;gap:4px}
+ .track-preview .technology-badge{width:clamp(50px,15vw,60px);min-height:54px}
+ .stack-panel-region{max-width:100%;min-width:0}
+ .stack-panel{padding:clamp(15px,4vw,22px)}
+ .stack-panel-heading{min-width:0;flex-wrap:wrap}
+ .stack-panel-heading h3{font-size:clamp(24px,6.5vw,32px);line-height:1.12;overflow-wrap:anywhere}
+ .stack-panel-heading p{font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+ .stack-panel-heading>button{min-height:48px}
+ .stack-panel-groups{min-width:0}
+ .stack-tools{grid-template-columns:repeat(auto-fill,minmax(min(100%,145px),1fr));min-width:0}
+ .stack-tools .technology-badge{min-width:0;max-width:100%;font-size:clamp(10px,2.9vw,12px);overflow-wrap:anywhere}
+ .track-footer{gap:9px;flex-wrap:wrap;font-size:clamp(8px,2.2vw,10px);line-height:1.5}
+ .track-footer span{min-width:0;overflow-wrap:anywhere}
+ .discount-card{min-width:0;padding-inline:clamp(16px,5vw,22px)}
+ .discount-card h3{font-size:clamp(15px,4vw,18px)}
+ .discount-card p,.discount-note{font-size:clamp(12px,3.2vw,14px);line-height:1.6;overflow-wrap:anywhere}
+ .ticket-copy h2,.contacts-copy h2{font-size:clamp(43px,12vw,60px);line-height:1.02}
+ .digital-ticket{min-width:0;grid-template-columns:minmax(0,1fr) clamp(38px,12vw,48px)}
+ .ticket-main{min-width:0;padding-inline:clamp(11px,3.5vw,16px)}
+ .ticket-header .brand-logo{width:clamp(58px,17vw,78px);height:auto}
+ .ticket-header>span,.ticket-label,.ticket-data small,.ticket-disclaimer{font-size:clamp(8px,2vw,9px);line-height:1.5;overflow-wrap:anywhere}
+ .ticket-data{min-width:0;gap:4px}
+ .ticket-data>div{min-width:0}
+ .ticket-data strong{font-size:clamp(10px,2.8vw,12px);overflow-wrap:anywhere}
+ .venue-info h2{font-size:clamp(34px,10vw,46px);line-height:1.05;overflow-wrap:anywhere;hyphens:auto}
+ .venue-intro,.venue-data b,.venue-data p,.map-provider-note{font-size:clamp(14px,3.8vw,16px);line-height:1.65;overflow-wrap:anywhere}
+ .venue-data>div{min-width:0}
+ .venue-data small{font-size:clamp(9px,2.3vw,10px);line-height:1.5;overflow-wrap:anywhere}
+ .venue-buttons a{min-height:52px;padding-inline:15px;font-size:clamp(10px,2.8vw,12px)}
+ .map-panel{min-width:0;max-width:100%}
+ .map-panel-head,.map-panel-foot{flex-wrap:wrap;font-size:clamp(8px,2.2vw,10px);line-height:1.5}
+ .map-iframe{height:clamp(250px,70vw,340px)}
+ .contacts-copy>p:last-child{font-size:clamp(14px,3.8vw,16px)}
+ .contact-links>a{grid-template-columns:40px minmax(0,1fr) 18px;min-height:76px;gap:10px;padding-block:9px}
+ .contact-links small{font-size:clamp(9px,2.3vw,10px);line-height:1.4}
+ .contact-links strong{font-size:clamp(14px,4vw,17px);line-height:1.35;overflow-wrap:anywhere}
+ .farewell-section{padding-inline:var(--mobile-gutter,clamp(17px,5.2vw,24px))}
+ .farewell-card{padding-inline:clamp(12px,4vw,20px)}
+ .farewell-card h2{font-size:clamp(38px,11vw,56px);line-height:1.06;overflow-wrap:anywhere}
+ .farewell-date{flex-wrap:wrap}
+ .farewell-date strong{font-size:clamp(13px,3.7vw,16px);text-wrap:balance}
+ .farewell-route{min-height:52px;width:min(100%,340px);font-size:clamp(11px,3vw,13px)}
+ .footer{padding-inline:var(--mobile-gutter,clamp(17px,5.2vw,24px))}
+ .footer-main,.footer-bottom{min-width:0}
+ .footer-signoff{font-size:clamp(15px,4.1vw,19px);line-height:1.55}
+ .footer-nav{font-size:clamp(12px,3.2vw,14px)}
+ .footer-bottom>span{min-width:0;overflow-wrap:anywhere}
+ .footer-bottom>span:nth-child(2){font-size:clamp(8px,2vw,10px)}
+ .envelope-scene{min-height:100svh;padding:clamp(18px,5vh,30px) var(--mobile-gutter,clamp(17px,5.2vw,24px))}
+ .envelope-shell{width:min(100%,430px,88vw);max-width:100%}
+ .envelope-controls{width:min(100%,390px);gap:12px;font-size:clamp(8px,2.2vw,10px);line-height:1.5}
+ .sound-switch{min-height:44px;padding:10px 12px;font-size:9px}
+ .envelope-caption{max-width:100%;min-width:0}
+ .envelope-caption>div{min-width:0}
+ .envelope-caption strong{font-size:clamp(12px,3.2vw,14px)}
+ .envelope-caption span{font-size:clamp(18px,5vw,22px);line-height:1.3;overflow-wrap:anywhere}
+ .envelope-caption small{font-size:clamp(9px,2.4vw,10px);line-height:1.5}
+ .envelope-invitation-line{font-size:clamp(14px,3.8vw,17px);line-height:1.4;overflow-wrap:anywhere}
+}
+
+@media(max-width:360px){
+ :root{--mobile-gutter:16px}
+ .hero h1{font-size:clamp(82px,26vw,94px)}
+ .hero-facts{grid-template-columns:minmax(0,1.05fr) minmax(48px,.5fr) minmax(0,.95fr);gap:6px}
+ .hero-facts small{font-size:7px;letter-spacing:.06em}
+ .hero-facts strong{font-size:11px}
+ .envelope-scene{padding-inline:16px}
+ .envelope-overline{font-size:8px;letter-spacing:.08em}
+ .envelope-shell{width:min(100%,88vw)}
+ .ticket-main h3{font-size:clamp(38px,12vw,46px)}
+ .ticket-stub{gap:12px}
+ .section-code{max-width:55%;text-align:right}
+ .countdown-unit span{font-size:8px;letter-spacing:.08em}
+ .contact-links>a{grid-template-columns:36px minmax(0,1fr) 16px;gap:8px}
+}
+
+/* A brief sequence gives the first screen a deliberate arrival after the letter. */
+.site-shell.site-is-visible .hero-main>.micro-label,
+.site-shell.site-is-visible .hero-main>h1,
+.site-shell.site-is-visible .hero-main>.hero-subline,
+.site-shell.site-is-visible .hero-main>.hero-slogan,
+.site-shell.site-is-visible .hero-main>.hero-kyrgyz,
+.site-shell.site-is-visible .hero-main>.hero-copy,
+.site-shell.site-is-visible .hero-main>.primary-button,
+.site-shell.site-is-visible .hero-main>.hero-facts{animation:heroArrival .55s cubic-bezier(.2,.7,.2,1) both}
+.site-shell.site-is-visible .hero-main>.micro-label{animation-delay:.03s}
+.site-shell.site-is-visible .hero-main>h1{animation-delay:.08s}
+.site-shell.site-is-visible .hero-main>.hero-subline{animation-delay:.14s}
+.site-shell.site-is-visible .hero-main>.hero-slogan{animation-delay:.19s}
+.site-shell.site-is-visible .hero-main>.hero-kyrgyz{animation-delay:.23s}
+.site-shell.site-is-visible .hero-main>.hero-copy{animation-delay:.27s}
+.site-shell.site-is-visible .hero-main>.primary-button{animation-delay:.31s}
+.site-shell.site-is-visible .hero-main>.hero-facts{animation-delay:.35s}
+.envelope-is-opening .letter-top,
+.envelope-is-opening .envelope-letter>strong,
+.envelope-is-opening .letter-subtitle,
+.envelope-is-opening .letter-rule,
+.envelope-is-opening .letter-kyrgyz,
+.envelope-is-opening .letter-code{animation:inviteDetailIn .34s cubic-bezier(.2,.7,.2,1) both}
+.envelope-is-opening .letter-top{animation-delay:.15s}
+.envelope-is-opening .envelope-letter>strong{animation-delay:.23s}
+.envelope-is-opening .letter-subtitle{animation-delay:.29s}
+.envelope-is-opening .letter-rule{animation-delay:.34s}
+.envelope-is-opening .letter-kyrgyz{animation-delay:.39s}
+.envelope-is-opening .letter-code{animation-delay:.44s}
+.reveal{transition-duration:.52s}
+.track-card,.track-toggle,.stack-panel-heading>button,.contact-links>a,.venue-buttons a,.farewell-route,.primary-button,.sound-switch{transition-timing-function:cubic-bezier(.2,.7,.2,1)}
+.track-toggle:focus-visible,.stack-panel-heading>button:focus-visible,.sound-switch:focus-visible,.contact-links>a:focus-visible,.farewell-route:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+@keyframes heroArrival{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes inviteDetailIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+
+@media(prefers-reduced-motion:reduce){
+ .site-shell.site-is-visible .hero-main>* ,
+ .envelope-is-opening .letter-top,
+ .envelope-is-opening .envelope-letter>strong,
+ .envelope-is-opening .letter-subtitle,
+ .envelope-is-opening .letter-rule,
+ .envelope-is-opening .letter-kyrgyz,
+ .envelope-is-opening .letter-code{animation:none!important}
+ .reveal{transition:none!important}
+}

@@ -112,8 +112,8 @@ export const event = {
       { phone: '+996 557 052 018', link: 'tel:+996557052018' },
       { phone: '+996 777 052 018', link: 'tel:+996777052018' },
     ],
-    instagramHandle: '@geeksosh',
-    instagram: 'https://www.instagram.com/geeksosh/',
+    instagramHandle: '@geeks_osh',
+    instagram: 'https://www.instagram.com/geeks_osh/',
   },
   terminalLines: [
     'Инициализация мероприятия...',
