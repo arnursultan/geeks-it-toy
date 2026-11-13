@@ -6,7 +6,7 @@ const organizationId = '70000001054702939';
 // Координаты точки Geeks из ссылки 2ГИС для маршрута и центрирования виджета.
 const mapPoint = { lat: 40.51932, lon: 72.80285 };
 const mapZoom = 16;
-const dateLabel = '7 ноября 2026 года';
+const dateLabel = '21 ноября 2026 года';
 const startTime = '13:00';
 const brand = (name: string, icon: string, color: string): Technology => ({ name, icon, color });
 const concept = (name: string, icon: string): Technology => ({ name, icon });
@@ -88,9 +88,9 @@ const designTools = [
 
 /** Официальный Geeks asset взят из страницы IT-академии it.geeks.kg. */
 export const event = {
-  dateTime: '2026-11-07T13:00:00+06:00',
+  dateTime: '2026-11-21T13:00:00+06:00',
   dateLabel,
-  dateShort: '07.11.2026',
+  dateShort: '21.11.2026',
   startTime,
   timeZone: 'Asia/Bishkek',
   city: 'Ош',
